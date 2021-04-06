@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+const inter = `Inter, sans-serif`;
 
 const GlobalStyle = createGlobalStyle` *,
 *::before,
@@ -11,6 +12,7 @@ const GlobalStyle = createGlobalStyle` *,
 
 body {
     background: #1b1b1b;
+    font-family:${inter};
 }
 
 
@@ -23,6 +25,7 @@ button {
     background: transparent;
     color: white;
     transition: all .5s ease;
+    font-family:${inter};
 
     &:hover {
         background: #23d997;
