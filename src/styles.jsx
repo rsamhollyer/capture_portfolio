@@ -158,3 +158,9 @@ export const ImageDisplay = styled.div`
     object-fit: cover;
   }
 `;
+
+export const WaveSvg = styled.svg`
+  position: absolute;
+  left: 0;
+  z-index: -1;
+`;
