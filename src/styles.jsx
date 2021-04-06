@@ -1,4 +1,5 @@
 import styled from "styled-components";
+const lobster = `"Lobster",cursive`;
 
 export const About = styled.div`
   min-height: 90vh;
@@ -47,5 +48,34 @@ export const Card = styled.div`
     }
     display: flex;
     align-items: center;
+  }
+`;
+
+export const StyledNav = styled.nav`
+  min-height: 10vh;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  background: #282828;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  #logo {
+    font-size: 1.5rem;
+    font-family: ${lobster};
+    font-weight: lighter;
+  }
+  li {
+    padding-left: 10rem;
+    position: relative;
   }
 `;
