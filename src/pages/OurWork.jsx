@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
-import { Work, Movie } from "../styles";
+import { Work, Movie, Hide, Frame1, Frame2, Frame3, Frame4 } from "../styles";
 import athlete from "../assets/images/athlete-small.png";
 import theracer from "../assets/images/theracer-small.png";
 import goodtimes from "../assets/images/goodtimes-small.png";
-import { PageAnimation } from "../animation";
+import {
+  PageAnimation,
+  PhotoAnim,
+  Fade,
+  LineAnim,
+  Slider,
+  SliderContainer,
+} from "../animation";
+import { motion } from "framer-motion";
 
 function OurWork() {
   return (
@@ -14,28 +22,36 @@ function OurWork() {
       animate="show"
       exit="exit"
     >
+      <motion.div variants={SliderContainer}>
+        <Frame1 variants={Slider}> </Frame1>
+        <Frame2 variants={Slider}> </Frame2>
+        <Frame3 variants={Slider}> </Frame3>
+        <Frame4 variants={Slider}> </Frame4>
+      </motion.div>
       <Movie>
-        <h2>The Athelete</h2>
+        <motion.h2 variants={Fade}>The Athelete</motion.h2>
 
-        <div className="line"></div>
+        <motion.div variants={LineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="boxer" />
+          <Hide>
+            <motion.img variants={PhotoAnim} src={athlete} alt="boxer" />
+          </Hide>
         </Link>
       </Movie>
       <Movie>
-        <h2>The Racer</h2>
+        <motion.h2 variants={Fade}>The Racer</motion.h2>
 
-        <div className="line"></div>
+        <motion.div variants={LineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={theracer} alt="a car" />
+          <motion.img variants={PhotoAnim} src={theracer} alt="a car" />
         </Link>
       </Movie>
       <Movie>
-        <h2>Good Times</h2>
+        <motion.h2 variants={Fade}>Good Times</motion.h2>
 
-        <div className="line"></div>
+        <motion.div variants={LineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
-          <img src={goodtimes} alt="a couple" />
+          <motion.img variants={PhotoAnim} src={goodtimes} alt="a couple" />
         </Link>
       </Movie>
     </Work>
