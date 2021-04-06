@@ -1,6 +1,7 @@
 import home1 from "../assets/images/home1.png";
 import { About, Description, Hide, Image } from "../styles";
-import { motion, Motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { TitleAnim, Fade, PhotoAnim } from "../animation";
 
 function AboutSection() {
   return (
@@ -8,25 +9,25 @@ function AboutSection() {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={TitleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={TitleAnim}>
               your <span>dreams </span> come
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>true.</motion.h2>
+            <motion.h2 variants={TitleAnim}>true.</motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={Fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={Fade}>Contact Us</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt="guy with a camera" />
+        <motion.img variants={PhotoAnim} src={home1} alt="guy with a camera" />
       </Image>
     </About>
   );
