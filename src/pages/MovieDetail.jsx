@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { MovieState } from "../movieState";
-import { Details, Headline, Awards, ImageDisplay } from "../styles";
-
+import { Headline, Awards, ImageDisplay, Details } from "../styles";
+import { PageAnimation } from "../animation.jsx";
 import Award from "../components/Award";
 
 function MovieDetail() {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState());
+  const [movies] = useState(MovieState());
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
@@ -19,7 +19,12 @@ function MovieDetail() {
   return (
     <>
       {movie && (
-        <Details>
+        <Details
+          variants={PageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Headline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />

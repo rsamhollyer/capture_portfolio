@@ -3,10 +3,11 @@ import { Work, Movie } from "../styles";
 import athlete from "../assets/images/athlete-small.png";
 import theracer from "../assets/images/theracer-small.png";
 import goodtimes from "../assets/images/goodtimes-small.png";
+import { PageAnimation } from "../animation";
 
 function OurWork() {
   return (
-    <Work>
+    <Work variants={PageAnimation} initial="hidden" animate="show" exit="exit">
       <Movie>
         <h2>The Athelete</h2>
 

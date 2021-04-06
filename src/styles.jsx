@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 const lobster = `"Lobster",cursive`;
 
 export const About = styled.div`
@@ -15,6 +16,15 @@ export const Description = styled.div`
   padding-right: 5rem;
   h2 {
     font-weight: lighter;
+  }
+`;
+
+export const Work = styled(motion.div)`
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 5rem 10rem;
+  h2 {
+    padding: 1rem 0;
   }
 `;
 
@@ -80,15 +90,6 @@ export const StyledNav = styled.nav`
   }
 `;
 
-export const Work = styled.div`
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 5rem 10rem;
-  h2 {
-    padding: 1rem 0;
-  }
-`;
-
 export const Movie = styled.div`
   padding-bottom: 10rem;
   .line {
@@ -103,7 +104,7 @@ export const Movie = styled.div`
   }
 `;
 
-export const Details = styled.div`
+export const Details = styled(motion.div)`
   color: white;
 `;
 
