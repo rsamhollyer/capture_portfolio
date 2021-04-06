@@ -7,7 +7,13 @@ import { PageAnimation } from "../animation";
 
 function OurWork() {
   return (
-    <Work variants={PageAnimation} initial="hidden" animate="show" exit="exit">
+    <Work
+      style={{ background: "#fff" }}
+      variants={PageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <Movie>
         <h2>The Athelete</h2>
 
