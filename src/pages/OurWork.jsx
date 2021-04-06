@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Work, Movie } from "../styles";
 import athlete from "../assets/images/athlete-small.png";
@@ -12,7 +11,7 @@ function OurWork() {
         <h2>The Athelete</h2>
 
         <div className="line"></div>
-        <Link>
+        <Link to="/work/the-athlete">
           <img src={athlete} alt="boxer" />
         </Link>
       </Movie>
@@ -20,7 +19,7 @@ function OurWork() {
         <h2>The Racer</h2>
 
         <div className="line"></div>
-        <Link>
+        <Link to="/work/the-racer">
           <img src={theracer} alt="a car" />
         </Link>
       </Movie>
@@ -28,7 +27,7 @@ function OurWork() {
         <h2>Good Times</h2>
 
         <div className="line"></div>
-        <Link>
+        <Link to="/work/good-times">
           <img src={goodtimes} alt="a couple" />
         </Link>
       </Movie>

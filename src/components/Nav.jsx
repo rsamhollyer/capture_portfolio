@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { StyledNav } from "../styles";
 import { Link } from "react-router-dom";
 function Nav() {
