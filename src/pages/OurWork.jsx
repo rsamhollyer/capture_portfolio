@@ -12,8 +12,8 @@ import {
   SliderContainer,
 } from "../animation";
 
-import { useScroll } from "../components/useScroll";
-
+import { useScroll } from "../components/hooks/useScroll";
+import ScrollToTop from "../components/hooks/scrollToTop";
 import { motion } from "framer-motion";
 
 function OurWork() {
@@ -65,6 +65,7 @@ function OurWork() {
           <motion.img variants={PhotoAnim} src={goodtimes} alt="a couple" />
         </Link>
       </Movie>
+      <ScrollToTop />
     </Work>
   );
 }

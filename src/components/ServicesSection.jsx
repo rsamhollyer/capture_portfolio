@@ -6,7 +6,7 @@ import home2 from "../assets/images/home2.png";
 import styled from "styled-components";
 import { About, Description, Image, Cards, Card } from "../styles";
 import { ScrollReveal } from "../animation";
-import { useScroll } from "./useScroll";
+import { useScroll } from "./hooks/useScroll";
 
 function ServicesSection() {
   const [element, controls] = useScroll();

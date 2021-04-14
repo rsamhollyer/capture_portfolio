@@ -4,6 +4,7 @@ import { MovieState } from "../movieState";
 import { Headline, Awards, ImageDisplay, Details } from "../styles";
 import { PageAnimation } from "../animation.jsx";
 import Award from "../components/Award";
+import ScrollToTop from "../components/hooks/scrollToTop";
 
 function MovieDetail() {
   const history = useHistory();
@@ -39,6 +40,7 @@ function MovieDetail() {
           </ImageDisplay>
         </Details>
       )}
+      <ScrollToTop />
     </>
   );
 }

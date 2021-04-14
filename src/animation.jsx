@@ -28,6 +28,7 @@ export const TitleAnim = {
 export const Fade = {
   hidden: {
     opacity: 0,
+    transition: { duration: 1, ease: "easeOut" },
   },
   show: {
     opacity: 1,

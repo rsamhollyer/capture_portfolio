@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
-import { useScroll } from "./useScroll";
+import { useScroll } from "./hooks/useScroll";
 import { ScrollReveal } from "../animation";
 
 function FaqSection() {
