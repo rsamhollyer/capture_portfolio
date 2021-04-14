@@ -9,6 +9,11 @@ export const About = styled(motion.div)`
   justify-content: center;
   padding: 5rem 10rem;
   color: white;
+  @media (max-width: 1300px) {
+    display: block;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
 `;
 
 export const Description = styled.div`
@@ -17,12 +22,22 @@ export const Description = styled.div`
   h2 {
     font-weight: lighter;
   }
+  @media (max-width: 1300px) {
+    padding: 0;
+    button {
+      margin: 2rem 0 5rem 0;
+    }
+  }
 `;
 
 export const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
   h2 {
     padding: 1rem 0;
   }
@@ -65,6 +80,9 @@ export const Frame4 = styled(Frame1)`
 export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 export const Card = styled.div`
@@ -92,7 +110,6 @@ export const StyledNav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 99;
-  opacity: 0.66;
 
   a {
     color: white;
@@ -111,6 +128,22 @@ export const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+  }
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    #logo {
+      display: inline-block;
+      margin: 2rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+    }
+    li {
+      padding: 0;
+    }
   }
 `;
 
@@ -156,6 +189,10 @@ export const Awards = styled.div`
   align-content: center;
   justify-content: space-around;
   margin: 5rem 10rem;
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 export const AwardStyle = styled.div`
@@ -193,11 +230,18 @@ export const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  @media (max-width: 1300px) {
+    padding: 2rem;
+    font-size: 1rem;
+  }
 `;
 
 export const Title = styled.div`
   margin-bottom: 4rem;
   color: black;
+  @media (max-width: 1300px) {
+    margin-top: 5rem;
+  }
 `;
 
 export const Circle = styled.div`
