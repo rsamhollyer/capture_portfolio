@@ -258,3 +258,12 @@ export const Social = styled(motion.div)`
     margin: 2rem;
   }
 `;
+
+export const Line = styled(motion.div)`
+  height: 0.3rem;
+  background: #23d997;
+  width: 0%;
+  position: absolute;
+  bottom: -80%;
+  left: 60%;
+`;
