@@ -110,7 +110,7 @@ export const StyledNav = styled.nav`
   }
 `;
 
-export const Movie = styled.div`
+export const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;

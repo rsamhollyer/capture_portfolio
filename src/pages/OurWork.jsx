@@ -11,9 +11,15 @@ import {
   Slider,
   SliderContainer,
 } from "../animation";
+
+import { useScroll } from "../components/useScroll";
+
 import { motion } from "framer-motion";
 
 function OurWork() {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+
   return (
     <Work
       style={{ background: "#fff" }}
@@ -28,9 +34,9 @@ function OurWork() {
         <Frame3 variants={Slider}> </Frame3>
         <Frame4 variants={Slider}> </Frame4>
       </motion.div>
+
       <Movie>
         <motion.h2 variants={Fade}>The Athelete</motion.h2>
-
         <motion.div variants={LineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
           <Hide>
@@ -38,17 +44,22 @@ function OurWork() {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
-        <motion.h2 variants={Fade}>The Racer</motion.h2>
 
+      <Movie ref={element} variants={Fade} animate={controls} initial="hidden">
+        <h2>The Racer</h2>
         <motion.div variants={LineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
           <motion.img variants={PhotoAnim} src={theracer} alt="a car" />
         </Link>
       </Movie>
-      <Movie>
-        <motion.h2 variants={Fade}>Good Times</motion.h2>
 
+      <Movie
+        ref={element2}
+        variants={Fade}
+        animate={controls2}
+        initial="hidden"
+      >
+        <h2>Good Times</h2>
         <motion.div variants={LineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
           <motion.img variants={PhotoAnim} src={goodtimes} alt="a couple" />
