@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Toggle(props) {
   const { children, title } = props;
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <motion.div layout className="question" onClick={() => setToggle(!toggle)}>

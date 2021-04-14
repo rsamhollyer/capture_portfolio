@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 const lobster = `"Lobster",cursive`;
 
-export const About = styled.div`
+export const About = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   align-items: center;
